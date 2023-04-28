@@ -31,6 +31,6 @@ router.register(r'books', BookViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('download/<int:pk>', download_epub, name='download_epub'),
-    path('admin/', admin.site.urls),
+    path(settings.SECRET_ADMIN_URL+'/admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
