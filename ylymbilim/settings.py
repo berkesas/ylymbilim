@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    'https://ylymbilim.com', 'https://localhost:3000'
+    env('CORS_ALLOWED_SITE', default=''),
 ]
 # Application definition
 
